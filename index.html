@@ -94,16 +94,16 @@
 <li>用户-角色映射：用户和角色之间的映射关系</li>
 <li>角色-权限映射：角色和权限之间的映射</li>
 </ul>
-<p><img src="%E5%86%85%E5%AE%B9%E5%88%9A%E8%A6%81.assets/image-20210620125317568.png" alt="image-20210620125317568"></p>
+<p><img src="RBAC/image-20210620125317568.png" alt="image-20210620125317568"></p>
 <h3 id="4、RBAC96模型"><a href="#4、RBAC96模型" class="headerlink" title="4、RBAC96模型"></a>4、RBAC96模型</h3><ul>
 <li>RBAC96是一个家族模型，包括了rbac0、rbac1、rbac2、rbac3模型，其中rbac3最为复杂</li>
 </ul>
-<p><img src="%E5%86%85%E5%AE%B9%E5%88%9A%E8%A6%81.assets/image-20210620125606247.png" alt="image-20210620125606247"></p>
+<p><img src="RBAC/image-20210620125606247.png" alt="image-20210620125606247"></p>
 <h3 id="5、RBAC0模型"><a href="#5、RBAC0模型" class="headerlink" title="5、RBAC0模型"></a>5、RBAC0模型</h3><ul>
 <li>每个角色至少具备一个权限，每个用户至少扮演一个角色；</li>
 <li>用户可以在会话中更改激活角色</li>
 </ul>
-<p><img src="%E5%86%85%E5%AE%B9%E5%88%9A%E8%A6%81.assets/image-20210620130112963.png" alt="image-20210620130112963"></p>
+<p><img src="RBAC/image-20210620130112963.png" alt="image-20210620130112963"></p>
 <h3 id="6、RBAC1模型"><a href="#6、RBAC1模型" class="headerlink" title="6、RBAC1模型"></a>6、RBAC1模型</h3><ul>
 <li>RBAC1模型是在RBAC0模型的基础上增加了角色可以存在继承关系</li>
 <li>继承关系实现分类<ul>
@@ -112,7 +112,7 @@
 </ul>
 </li>
 </ul>
-<p><img src="%E5%86%85%E5%AE%B9%E5%88%9A%E8%A6%81.assets/image-20210620130713225.png" alt="image-20210620130713225"></p>
+<p><img src="RBAC/image-20210620130713225.png" alt="image-20210620130713225"></p>
 <h3 id="7、RBAC2模型"><a href="#7、RBAC2模型" class="headerlink" title="7、RBAC2模型"></a>7、RBAC2模型</h3><ul>
 <li>RBAC2模型是在RBAC0模型的基础上增加了角色访问控制</li>
 <li>角色访问控制规则：<ul>
@@ -131,7 +131,7 @@
 <h3 id="8、RABC3模型"><a href="#8、RABC3模型" class="headerlink" title="8、RABC3模型"></a>8、RABC3模型</h3><ul>
 <li>RABC3=RABC1+RABC2</li>
 </ul>
-<p><img src="%E5%86%85%E5%AE%B9%E5%88%9A%E8%A6%81.assets/image-20210620132527204.png" alt="image-20210620132527204"></p>
+<p><img src="RBAC/image-20210620132527204.png" alt="image-20210620132527204"></p>
 <h3 id="9、RBAC3-Resources模型"><a href="#9、RBAC3-Resources模型" class="headerlink" title="9、RBAC3+Resources模型"></a>9、RBAC3+Resources模型</h3><ul>
 <li>该模型是工作中对RBAC3模型的一种扩展模型，权限是用于对资源的控制；</li>
 <li>一个权限可以控制多种资源，比如一个新增用户权限包括对用户列表页面、新增按钮两种资源的访问</li>
@@ -145,7 +145,7 @@
 </ul>
 </li>
 </ul>
-<p><img src="%E5%86%85%E5%AE%B9%E5%88%9A%E8%A6%81.assets/image-20210620133844075.png" alt="image-20210620133844075"></p>
+<p><img src="RBAC/image-20210620133844075.png" alt="image-20210620133844075"></p>
 <h3 id="10、RBAC3-Resources-Group模型"><a href="#10、RBAC3-Resources-Group模型" class="headerlink" title="10、RBAC3+Resources+Group模型"></a>10、RBAC3+Resources+Group模型</h3><ul>
 <li>RBAC3+Resources的基础上增加了分组信息，用户分类管理便于操作。</li>
 <li>分组实现分类：<ul>
@@ -154,14 +154,14 @@
 </ul>
 </li>
 </ul>
-<p><img src="%E5%86%85%E5%AE%B9%E5%88%9A%E8%A6%81.assets/image-20210620135019034.png" alt="image-20210620135019034"></p>
-<h3 id="11、如何设计RBAC3-Resources-Group模型的数据库"><a href="#11、如何设计RBAC3-Resources-Group模型的数据库" class="headerlink" title="11、如何设计RBAC3+Resources+Group模型的数据库"></a>11、如何设计RBAC3+Resources+Group模型的数据库</h3><img src="内容刚要.assets/image-20210623171143635.png" alt="image-20210623171143635" style="zoom:100%;" />
+<p><img src="RBAC/image-20210620135019034.png" alt="image-20210620135019034"></p>
+<h3 id="11、如何设计RBAC3-Resources-Group模型的数据库"><a href="#11、如何设计RBAC3-Resources-Group模型的数据库" class="headerlink" title="11、如何设计RBAC3+Resources+Group模型的数据库"></a>11、如何设计RBAC3+Resources+Group模型的数据库</h3><img src="RBAC/image-20210623171143635.png" alt="image-20210623171143635" style="zoom:100%;" />
 
 <h3 id="12、如何使用ElementUiTree组件，完成用户组-用户的树形展示"><a href="#12、如何使用ElementUiTree组件，完成用户组-用户的树形展示" class="headerlink" title="12、如何使用ElementUiTree组件，完成用户组+用户的树形展示"></a>12、如何使用ElementUiTree组件，完成用户组+用户的树形展示</h3>
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://drgonwater.github.io/2021/06/23/RBAC/" data-id="ckq9lq41r000084v82qrj8d74" class="article-share-link">Share</a>
+      <a data-url="https://drgonwater.github.io/2021/06/23/RBAC/" data-id="ckq9mprw90000m4v81gk4egt6" class="article-share-link">Share</a>
       
       
     </footer>
@@ -197,7 +197,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://drgonwater.github.io/2021/06/23/%E7%AC%AC%E4%B8%80%E7%AF%87%E6%96%87%E7%AB%A0/" data-id="ckq9lq41w000284v8a35bc1sh" class="article-share-link">Share</a>
+      <a data-url="https://drgonwater.github.io/2021/06/23/%E7%AC%AC%E4%B8%80%E7%AF%87%E6%96%87%E7%AB%A0/" data-id="ckq9mprwh0002m4v81yrn26qr" class="article-share-link">Share</a>
       
       
     </footer>
@@ -233,7 +233,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://drgonwater.github.io/2021/06/23/article-title/" data-id="ckq9lq41v000184v8a39x7rb9" class="article-share-link">Share</a>
+      <a data-url="https://drgonwater.github.io/2021/06/23/article-title/" data-id="ckq9mprwe0001m4v8csy03t8h" class="article-share-link">Share</a>
       
       
     </footer>
@@ -282,7 +282,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://drgonwater.github.io/2021/06/23/hello-world/" data-id="ckq9kvnox000030v8792pf02q" class="article-share-link">Share</a>
+      <a data-url="https://drgonwater.github.io/2021/06/23/hello-world/" data-id="ckq9mprwi0003m4v8d90wgtvf" class="article-share-link">Share</a>
       
       
     </footer>
