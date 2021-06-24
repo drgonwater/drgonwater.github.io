@@ -11,7 +11,7 @@
         name="viewport"
         content="width=device-width, initial-scale=1, maximum-scale=1"
       />
-      <title> Hexo</title>
+      <title> Drgonwater</title>
   <meta name="generator" content="hexo-theme-ayer">
       
       <link rel="shortcut icon" href="/favicon.ico" />
@@ -54,7 +54,7 @@
       <img src="/images/cover1.jpg" alt="image frame" />
     </div>
     <div class="cover-inner text-center text-white">
-      <h1><a href="/">Hexo</a></h1>
+      <h1><a href="/">Drgonwater</a></h1>
       <div id="subtitle-box">
         
         <span id="subtitle"></span>
@@ -167,6 +167,17 @@
   data-scroll-reveal
 >
   <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2021/06/23/RBAC/"
+    >RBAC系统权限</a> 
+</h2>
+ 
+
+      
+    </header>
      
     <div class="article-meta">
       <a href="/2021/06/23/RBAC/" class="article-date">
@@ -184,80 +195,11 @@
 <li>一个管理员能拥有多种权限和多种操作</li>
 </ul>
 </li>
-</ul>
-<h3 id="2、什么是RBAC"><a href="#2、什么是RBAC" class="headerlink" title="2、什么是RBAC"></a>2、什么是RBAC</h3><p>RBAC模型（Role-Based Access Control：基于角色的访问控制）模型是20世纪90年代研究出来的一种新模型，但其实在20世纪70年代的多用户计算时期，这种思想就已经被提出来，直到20世纪90年代中后期，RBAC才在研究团体中得到一些重视，并先后提出了许多类型的RBAC模型。其中以美国George Mason大学信息安全技术实验室（LIST）提出的RBAC96模型最具有代表，并得到了普遍的公认。</p>
-<p>RBAC认为权限授权的过程可以抽象地概括为：Who是否可以对What进行How的访问操作，并对这个逻辑表达式进行判断是否为True的求解过程，也即是将权限问题转换为What、How的问题，Who、What、How构成了访问权限三元组，具体的理论可以参考RBAC96的论文，这里我们就不做详细的展开介绍，大家有个印象即可。</p>
-<h3 id="3、RBAC的组成部分"><a href="#3、RBAC的组成部分" class="headerlink" title="3、RBAC的组成部分"></a>3、RBAC的组成部分</h3><ul>
-<li>User（用户）：每个用户都有唯一的UID识别，并被授予不同的角色</li>
-<li>Role（角色）：不同角色具有不同的权限</li>
-<li>Permission（权限）：访问权限</li>
-<li>用户-角色映射：用户和角色之间的映射关系</li>
-<li>角色-权限映射：角色和权限之间的映射</li>
-</ul>
-<p><img src="RBAC/image-20210620125317568.png" alt="image-20210620125317568"></p>
-<h3 id="4、RBAC96模型"><a href="#4、RBAC96模型" class="headerlink" title="4、RBAC96模型"></a>4、RBAC96模型</h3><ul>
-<li>RBAC96是一个家族模型，包括了rbac0、rbac1、rbac2、rbac3模型，其中rbac3最为复杂</li>
-</ul>
-<p><img src="RBAC/image-20210620125606247.png" alt="image-20210620125606247"></p>
-<h3 id="5、RBAC0模型"><a href="#5、RBAC0模型" class="headerlink" title="5、RBAC0模型"></a>5、RBAC0模型</h3><ul>
-<li>每个角色至少具备一个权限，每个用户至少扮演一个角色；</li>
-<li>用户可以在会话中更改激活角色</li>
-</ul>
-<p><img src="RBAC/image-20210620130112963.png" alt="image-20210620130112963"></p>
-<h3 id="6、RBAC1模型"><a href="#6、RBAC1模型" class="headerlink" title="6、RBAC1模型"></a>6、RBAC1模型</h3><ul>
-<li>RBAC1模型是在RBAC0模型的基础上增加了角色可以存在继承关系</li>
-<li>继承关系实现分类<ul>
-<li>多继承：可以存在多个父角色</li>
-<li>单继承：只能有一个父角色</li>
-</ul>
-</li>
-</ul>
-<p><img src="RBAC/image-20210620130713225.png" alt="image-20210620130713225"></p>
-<h3 id="7、RBAC2模型"><a href="#7、RBAC2模型" class="headerlink" title="7、RBAC2模型"></a>7、RBAC2模型</h3><ul>
-<li>RBAC2模型是在RBAC0模型的基础上增加了角色访问控制</li>
-<li>角色访问控制规则：<ul>
-<li>角色互斥：同一用户只能分配到一组互斥角色集合中的一个角色；例子：在审计活动中，一个角色不能同时被指派给会计角色和审计员角色。</li>
-<li>基数约束：一个角色被分配的数量是有限制的；比如一个功能高层领导人只有一个，因此角色需要限制为1个</li>
-<li>先决条件：指获得某个角色之前需要先获得其它角色<ul>
-<li>方式一：先决角色只有一种（必要）</li>
-<li>方式二：先决角色有多种（必要）</li>
-<li>方式二：先决角色有多种（选其一）</li>
-</ul>
-</li>
-<li>运行时互斥：例如一个用户具备两个角色，但在运行时不能同时激活两种角色</li>
-</ul>
-</li>
-</ul>
-<h3 id="8、RABC3模型"><a href="#8、RABC3模型" class="headerlink" title="8、RABC3模型"></a>8、RABC3模型</h3><ul>
-<li>RABC3=RABC1+RABC2</li>
-</ul>
-<p><img src="RBAC/image-20210620132527204.png" alt="image-20210620132527204"></p>
-<h3 id="9、RBAC3-Resources模型"><a href="#9、RBAC3-Resources模型" class="headerlink" title="9、RBAC3+Resources模型"></a>9、RBAC3+Resources模型</h3><ul>
-<li>该模型是工作中对RBAC3模型的一种扩展模型，权限是用于对资源的控制；</li>
-<li>一个权限可以控制多种资源，比如一个新增用户权限包括对用户列表页面、新增按钮两种资源的访问</li>
-<li>常见的Resources包括：<ul>
-<li>菜单</li>
-<li>页面操作按钮</li>
-<li>文件</li>
-<li>数据：数据范围</li>
-<li>系统：oa系统、财务系统</li>
-<li>终端：电脑、手机</li>
-</ul>
-</li>
-</ul>
-<p><img src="RBAC/image-20210620133844075.png" alt="image-20210620133844075"></p>
-<h3 id="10、RBAC3-Resources-Group模型"><a href="#10、RBAC3-Resources-Group模型" class="headerlink" title="10、RBAC3+Resources+Group模型"></a>10、RBAC3+Resources+Group模型</h3><ul>
-<li>RBAC3+Resources的基础上增加了分组信息，用户分类管理便于操作。</li>
-<li>分组实现分类：<ul>
-<li>允许授权的分组【实现】</li>
-<li>非授权的分组</li>
-</ul>
-</li>
-</ul>
-<p><img src="RBAC/image-20210620135019034.png" alt="image-20210620135019034"></p>
-<h3 id="11、如何设计RBAC3-Resources-Group模型的数据库"><a href="#11、如何设计RBAC3-Resources-Group模型的数据库" class="headerlink" title="11、如何设计RBAC3+Resources+Group模型的数据库"></a>11、如何设计RBAC3+Resources+Group模型的数据库</h3><img src="RBAC/image-20210623171143635.png" alt="image-20210623171143635" style="zoom:100%;" />
-
-<h3 id="12、如何使用ElementUiTree组件，完成用户组-用户的树形展示"><a href="#12、如何使用ElementUiTree组件，完成用户组-用户的树形展示" class="headerlink" title="12、如何使用ElementUiTree组件，完成用户组+用户的树形展示"></a>12、如何使用ElementUiTree组件，完成用户组+用户的树形展示</h3> 
+</ul> 
+      <a class="article-more-link" href="/2021/06/23/RBAC/"
+        >阅读更多...</a
+      >
+       
       <!-- reward -->
       
     </div>
@@ -501,7 +443,7 @@
 <nav class="navbar">
   
   <div class="logo">
-    <a href="/"><img src="/images/ayer-side.svg" alt="Hexo"></a>
+    <a href="/"><img src="/images/ayer-side.svg" alt="Drgonwater"></a>
   </div>
   
   <ul class="nav nav-main">
