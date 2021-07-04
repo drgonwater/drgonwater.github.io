@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Drgonwater</title>
+  
+  
+  <link href="https://drgonwater.github.io/atom.xml" rel="self"/>
+  
+  <link href="https://drgonwater.github.io/"/>
+  <updated>2021-06-23T16:11:50.308Z</updated>
+  <id>https://drgonwater.github.io/</id>
+  
+  <author>
+    <name>John Doe</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>RBAC系统权限</title>
+    <link href="https://drgonwater.github.io/2021/06/23/RBAC/"/>
+    <id>https://drgonwater.github.io/2021/06/23/RBAC/</id>
+    <published>2021-06-23T14:56:59.830Z</published>
+    <updated>2021-06-23T16:11:50.308Z</updated>
+    
+    
+    <summary type="html">&lt;h3 id=&quot;1、什么是系统权限&quot;&gt;&lt;a href=&quot;#1、什么是系统权限&quot; class=&quot;headerlink&quot; title=&quot;1、什么是系统权限&quot;&gt;&lt;/a&gt;1、什么是系统权限&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;定义：对某个功能进行操作时，需要先获得相关的‘允许’，才可以操作，否则操作会被拒绝。这里的允许即为权限&lt;/li&gt;
+&lt;li&gt;系统权限是一个复杂过程：&lt;ul&gt;
+&lt;li&gt;一个功能有多种权限操作，比如新增权限、修改权限、查看权限、删除权限等&lt;/li&gt;
+&lt;li&gt;一个系统存在多种权限，比如功能权限、菜单权限、数据权限等&lt;/li&gt;
+&lt;li&gt;一个管理员能拥有多种权限和多种操作&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;</summary>
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>第一篇文章</title>
+    <link href="https://drgonwater.github.io/2021/06/23/%E7%AC%AC%E4%B8%80%E7%AF%87%E6%96%87%E7%AB%A0/"/>
+    <id>https://drgonwater.github.io/2021/06/23/%E7%AC%AC%E4%B8%80%E7%AF%87%E6%96%87%E7%AB%A0/</id>
+    <published>2021-06-23T14:55:27.000Z</published>
+    <updated>2021-06-23T16:03:58.926Z</updated>
+    
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>article title</title>
+    <link href="https://drgonwater.github.io/2021/06/23/article-title/"/>
+    <id>https://drgonwater.github.io/2021/06/23/article-title/</id>
+    <published>2021-06-23T14:53:20.000Z</published>
+    <updated>2021-06-23T14:53:20.537Z</updated>
+    
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Hello World</title>
+    <link href="https://drgonwater.github.io/2021/06/23/hello-world/"/>
+    <id>https://drgonwater.github.io/2021/06/23/hello-world/</id>
+    <published>2021-06-23T14:14:12.012Z</published>
+    <updated>1985-10-26T08:15:00.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.io/docs/&quot;&gt;documentation&lt;/a&gt;</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+</feed>
